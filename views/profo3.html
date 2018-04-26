@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	The portfolio of Siddharth Gorey
+	</title>
+	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Crimson+Text|Lobster" rel="stylesheet"> 
+</head>
+<body>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style type="text/css">
+	div.sky{
+		width:100%;
+		height:1100px;
+		background: url("../images/sky.jpeg");
+		z-index:-1;
+
+	}
+	@keyframes moveBird{
+		0% { left:5px;top:5px;opacity: 1; }
+		50% {
+			left:90%;
+			top:1000px;
+			opacity: 1;
+		}
+		51%{
+			left:90%;
+			top:1000px;
+			opacity: 0;	
+		}
+		100% {
+			left:90%;
+			top:1000px;
+			opacity: 0;
+		}
+	}
+	div.bird{
+		width:100px;
+		height:100px;
+		background:url("../images/eagle.png");
+		transform:rotateZ(180deg);
+		background-size: 100% 100%;
+		z-index:1;
+		position:absolute;
+		left:5px;
+		top:5px;
+		animation-name:moveBird;
+		animation-duration:6s;
+		animation-delay:4s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	div#word1{
+		font-family: 'Gugi',cursive;
+		display:none;
+		position:absolute;
+		z-index:3;
+		left:74%;
+		font-size: 40px;
+		top:8%;
+	}
+	div#word2{
+		font-family: 'Gugi',cursive;
+		display:none;
+		position:absolute;
+		z-index:3;
+		left:74%;
+		font-size: 40px;
+		top:16%;
+	}
+	div#word3{
+		font-family: 'Gugi',cursive;
+		display:none;
+		position:absolute;
+		z-index:3;
+		left:76%;
+		font-size: 40px;
+		top:16%;
+	}
+	div#word4{
+		font-family: 'Gugi',cursive;
+		display:none;
+		position:absolute;
+		z-index:3;
+		left:82%;
+		font-size: 40px;
+		top:16%;
+
+	}
+	div#about{
+		position:fixed;
+		top:0;
+		left:0;
+		width:40%;
+		height:40%;
+		margin:30%;
+		margin-top:20%;
+		z-index:-3;
+	}
+	div#port{
+		
+		width:90%;
+		margin:5%;
+		margin-top:300px;
+		border-top:2px solid white;
+		z-index:1;
+		background-color:white;
+	}
+	div#image{
+		width:20%;
+		margin:5%;
+
+	}
+	div.imgbox{
+		cursor:pointer;
+		transition:0.3s;
+	}
+
+	.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+	
+	.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+border: 0;
+}
+	.nav-tabs>li.active>a{
+		border-bottom:3px solid black;
+	}
+</style>
+
+<div class="sky">
+	
+</div>
+<div class="bird">
+</div>
+<div id="word1">
+	Hi!
+</div>
+<div id="word2">
+ I 
+</div>
+<div id="word3">
+am 
+</div>
+<div id="word4">
+Siddharth
+</div>	
+<div id="about">
+	<h1 style="margin-left:30%;font-family: 'Crimson Text', serif;">About Me</h1>
+	<h3 style="font-family: 'Lobster',cursive;">I am a CS undergrad currently in the final year of graduation. I like to create.</h3>
+</div>
+
+<div id="port">
+	<h1 style="margin-left:40%;font-family:'Bitter',serif;border-top:1px solid black;width:155px; ">Portfolio</h1>
+	<ul class="nav nav-tabs">
+	  <li class="active"><a data-toggle="tab" href="#games">Games</a></li>
+	  <li><a data-toggle="tab" href="#art">Art</a></li>
+	  <li><a data-toggle="tab" href="#mod">Models</a></li>
+	</ul>
+
+	<div class="tab-content">
+	  <div id="games" class="tab-pane fade in active">
+	   <div class="row">
+	   	<div class="col-md-1"></div>
+	   <div class="col-md-3">
+	   		
+	   		<img class="imgbox" src="../images/games/pic5.png" alt="Not visible" height="300px" width="400px" style="margin:20px;"/> 
+	   		
+	   </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-3">
+	   		<img class="imgbox" src="../images/games/pic6.jpeg" alt="Not visible" height="300px" width="400px" style="margin:20px;"/> 
+	   </div>
+	   <div class="col-md-2"></div>
+	   </div>
+	   <div class="row">
+	   <div class="col-md-1"></div>
+	   <div class="col-md-3">
+	   		
+	   		<img class="imgbox" src="../images/games/pic7.jpeg" alt="Not visible" height="300px" width="400px"  style="margin:20px;"/> 
+	   		
+	   </div>
+	   <div class="col-md-2"></div>
+	   
+	   </div>
+	</div>
+	  <div id="art" class="tab-pane fade">
+	   	 <div class="row">
+	   	<div class="col-md-1"></div>
+	   <div class="col-md-3">
+	   		
+	   		<img class="imgbox" src="../images/art/pic9.jpg" alt="Not visible" height="300px" width="300px" style="margin:20px;margin-left: 70px;margin-right: 70px;"/> 
+	   		
+	   </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-3">
+	   		<img class="imgbox" src="../images/art/pic10.jpg" alt="Not visible" height="300px" width="400px" style="margin:20px;"/> 
+	   </div>
+	   <div class="col-md-2"></div>
+	   </div>
+	   <div class="row">
+	   <div class="col-md-1"></div>
+	   <div class="col-md-3">
+	   		
+	   		<img class="imgbox" src="../images/art/pic11.jpg" alt="Not visible" height="300px" width="300px" style="margin:20px;margin-left: 70px;margin-right: 70px;"/> 
+	   		
+	   </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-3">
+	   		<img class="imgbox" src="../images/art/pic12.jpg" alt="Not visible" height="300px" width="300px" style="margin:20px;margin-left: 70px;margin-right: 70px;"/> 
+	   </div>
+	   <div class="col-md-2"></div>
+	   </div>
+	    <div class="row">
+	   	<div class="col-md-1"></div>
+	   <div class="col-md-3">
+	   		
+	   		<img class="imgbox" src="../images/art/pic13.jpg" alt="Not visible" height="300px" width="300px" style="margin:20px;margin-left: 70px;margin-right: 70px;"/> 
+	   		
+	   </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-3">
+	   		<img class="imgbox" src="../images/art/pic14.jpg" alt="Not visible" height="300px" width="400px" style="margin:20px;"/> 
+	   </div>
+	   <div class="col-md-2"></div>
+	   </div>
+	   <div class="row">
+	   <div class="col-md-1"></div>
+	   <div class="col-md-3">
+	   		
+	   		<img class="imgbox" src="../images/art/pic15.jpg" alt="Not visible" height="300px" width="400px"  style="margin:20px;"/> 
+	   		
+	   </div>
+	   <div class="col-md-2"></div>
+	   </div> 
+	 </div>
+	  <div id="mod" class="tab-pane fade">
+	     <div class="row">
+	   	<div class="col-md-1"></div>
+	   <div class="col-md-3">
+	   		
+	   		<img class="imgbox" src="../images/models/pic2.jpg" alt="Not visible" height="300px" width="400px" style="margin:20px;"/> 
+	   		
+	   </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-3">
+	   		<img class="imgbox" src="../images/models/pic3.jpg" alt="Not visible" height="300px" width="400px" style="margin:20px;"/> 
+	   </div>
+	   <div class="col-md-2"></div>
+	   </div>
+	   <div class="row">
+	   <div class="col-md-1"></div>
+	   <div class="col-md-3">
+	   		
+	   		<img class="imgbox" src="../images/models/pic4.jpg" alt="Not visible" height="300px" width="300px" style="margin:20px;margin-left: 70px;margin-right: 70px;"/> 
+	   		
+	   </div>
+	   <div class="col-md-2"></div>
+	   <div class="col-md-3">
+	   		<img class="imgbox" src="../images/models/pic16.jpg" alt="Not visible" height="300px" width="400px" style="margin:20px;"/> 
+	   </div>
+	   <div class="col-md-2"></div>
+	   </div>
+	  </div>
+	</div>
+</div>
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+<div class="row" style="background-color: black;padding-left:50px;width:100%">
+	<h1><i>Contact: sid.gorey@gmail.com</i></h1>
+</div>	
+
+<script
+			  src="http://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#word1").fadeIn(1000);
+		$("#word2").fadeIn(3000);
+		$("#word3").fadeIn(4000);
+		$("#word4").fadeIn(5000);
+
+		$(window).scroll(function(){
+			var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+			$(".imgbox").each(function(){
+				$(this).on("click",function(){
+					$('#myModal').css("display","block");
+					$("#img01").attr("src",($(this).attr("src")));
+					$(".close").on("click",function(){
+						$('#myModal').css("display","none");
+					});
+				});
+				var objectBottom = $(this).offset().top;
+				if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+       				 if ($(this).css("display")=="none") {$(this).fadeIn(1000);}
+       				}
+      			// } else { //object goes out of view (scrolling up)
+        	// 		$(this).fadeOut(1000);
+      			// }
+			});
+		}).scroll();
+
+	});
+</script>
+</body>
+</html>
